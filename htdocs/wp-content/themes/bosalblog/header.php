@@ -41,19 +41,34 @@
 
 	<body <?php body_class(); ?>>
 
+            <!--<?php // to use a image just replace the <?php bloginfo('name'); ?>  ?> -->
+            <div id="logo">
+                <div class="wrap clearfix">
+                    <a class="left" href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" alt="BOSAL logo" /></a>
+                    <div class="right" id="header-search">
+                        <?php echo bones_wpsearch('$form'); ?>
+                    </div>
+                </div>
+            </div>
+            
 		<div id="container">
-
+                    
 			<header class="header" role="banner">
 
 				<div id="inner-header" class="wrap clearfix">
 
-					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-					<p id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
+					
 
 					<?php // if you'd like to use the site description you can un-comment it below ?>
 					<?php // bloginfo('description'); ?>
 
-
+                                    <!-- ============== RESPONSIVE SLIDES ================ -->
+                                    <ul class="rslides">
+                                        <li><div class="caption clearfix"><p>Brand New Bosal Toyota Land Cruiser Sidesteps...</p><div class="right caption_btn"><a href="<?php echo site_url('brand-new-bosal-toyota-land-cruiser-sidesteps'); ?>">More &rang;</a></div></div><img src="<?php echo get_template_directory_uri(); ?>/library/images/sidesteps.jpg" alt="Sidesteps"></li>
+                                        <li><div class="caption clearfix"><p>The Bosal Tando – Car Tow Stabilizer Unit...</p><div class="right caption_btn"><a href="<?php echo site_url('the-bosal-tando-car-tow-stabilizer-unit'); ?>">More &rang;</a></div></div><img src="<?php echo get_template_directory_uri(); ?>/library/images/tando.jpg" alt="Tando"></li>
+                                        <li><div class="caption clearfix"><p>Bosal Automotive introduces Stainless Steel Range...</p><div class="right caption_btn"><a href="<?php echo site_url('bosal-automotive-introduces-stainless-steel-range'); ?>">More &rang;</a></div></div><img src="<?php echo get_template_directory_uri(); ?>/library/images/stainlesssteel.jpg" alt="stainless steel range"></li>
+                                    </ul>
+                                    <!-- ============== END RESPONSIVE SLIDES ================ -->
 					<nav role="navigation">
 						<?php bones_main_nav(); ?>
 					</nav>

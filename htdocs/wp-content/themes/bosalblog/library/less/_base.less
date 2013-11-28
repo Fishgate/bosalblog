@@ -28,8 +28,6 @@ and will be used across all viewports.
 ******************************************************************/
 
 
-
-
 /*********************
 01. GENERAL STYLES
 *********************/
@@ -38,10 +36,11 @@ html, body {
 	/* height: 100%; */
 }
 body {
-	font-family: @serif;
+	font-family: @font-custom;
 	font-size: 100%;
 	line-height: 1.5;
 	color: #565656;
+        background: #e3e3e3;
 }
 
 /********************
@@ -93,7 +92,9 @@ body {
 	width: 96%;
 	margin: 0 auto;
 }
-#container {}
+#container {
+    padding-top: 100px;
+}
 
 /*********************
 04. LINK STYLES
@@ -123,6 +124,32 @@ a, a:visited {
 	}
 }
 
+.excerpt-read-more{
+    text-decoration: none;
+    color: @white;
+    background: @bosal-silver;
+    padding: 2px 5px;
+    font-size: 0.75em;
+}
+.excerpt-read-more:hover{
+    background: @bosal-red;
+    color: @white!important;
+}
+.excerpt-read-more:visited{
+    color: @white;
+}
+
+.tags{
+    background: #fafafa;
+    padding: 10px;
+}
+.tags a, .tagcloud a{
+    color: @bosal-grey;
+    text-decoration: none;
+}
+.tags a:hover, .tagcloud a:hover{
+    color: @bosal-red;
+}
 /******************************************************************
 05. H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
@@ -143,12 +170,13 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 }
 
 h1, .h1 {
-	font-size: 2.5em;
+	font-size: 1.5em;
 	line-height: 1.333em;
+        color: @bosal-grey-med;
 }
 
 h2, .h2 {
-	font-size: 1.75em;
+	font-size: 1.3em;
 	line-height: 1.4em;
 	margin-bottom: 0.375em;
 }
@@ -172,12 +200,29 @@ h5, .h5 {
 /*********************
 06. HEADER STYLES
 *********************/
+#header-search{
+    margin-top: 25px;
+    width: 250px;
+}
+#logo {
+            position: fixed;
+            z-index: 101;
+            background: rgba(255, 255, 255, 0.9);
+            width: 100%;
+            margin: 0;
+            
+            img{
+                padding: 10px;
+                display: block;
+                background: #333;
+            }
+        }
 
 .header {
-	#inner-header {}
+	#inner-header {
+            
+        }
 
-	#logo {}
-	
 	nav {
 		div.top-nav {
 			ul {
@@ -284,7 +329,10 @@ and more scalable.
 #content {
 	margin-top: 2.2em;
 
-	#inner-content {}
+	#inner-content {
+            padding: 10px;
+            background: #fff;
+        }
 }
 
 		.hentry {
@@ -755,7 +803,7 @@ and more scalable.
 		input[type=email],
 		input[type=url],
 		textarea {
-			padding: 3px 6px;
+			padding: 10px;
 			background: #efefef;
 			border: 2px solid #cecece;
 			line-height: 1.5em;
@@ -821,17 +869,43 @@ and more scalable.
 /*********************
 12. SIDEBARS & ASIDES
 *********************/
-
+#s{
+    width:68%;
+    font-size: 12px;
+    color: @bosal-grey;
+}
+#searchsubmit{
+    width: 30%;
+    padding: 9px;
+    font-size: 12px;
+}
+.screen-reader-text{
+    display: block;
+}
 .sidebar {}
 
-	.widgettitle {}
+	.widgettitle{
+            background: @bosal-silver;
+            border-bottom: 2px solid @bosal-red;
+            color: @white;
+            padding: 5px 10px;
+            font-weight: normal;
+        }
 
 	.widget {
 
 		ul {
 
 			li {
-
+                            a{
+                                color: @bosal-silver;
+                                text-decoration: none;
+                                margin: 0;
+                            }
+                            a:hover{
+                                color: @bosal-red;
+                                display: block;
+                            }
 				&:first-child {}
 
 				&:last-child {}
@@ -890,3 +964,58 @@ and more scalable.
 
 	.copyright {}
 
+
+/*========================== ADDED BY TYRONE ===============*/
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="email"],
+input[type="password"]{
+    padding: 7px;
+    
+}
+
+input[type="submit"]{
+    border: none;
+    background: @bosal-silver;
+    color: #fff;
+}
+input[type="submit"]:hover{
+    background: @bosal-red;
+}
+
+hr{
+    border: none;
+    border-bottom: 1px dashed @bosal-grey;
+}
+
+.page-numbers li{
+    display: inline-block;
+}
+
+/*================ SLIDER CAPTIONS =========*/
+.caption{
+    position: absolute;
+    z-index: 999;
+    bottom: 40px;
+    width: 100%;
+    min-width: 320px;
+    max-width: 40%;
+    padding: 0 10px;
+    color: @bosal-grey;
+    background: rgba(0, 0, 0, 0.8);
+}
+.caption_btn{
+    position: absolute;
+    bottom: 4px;
+    right: -58px;
+}
+.caption_btn a{
+    color: @white;
+    padding: 5px;
+    background: @bosal-red;
+    text-decoration: none;
+}
+.caption_btn a:hover{
+    color: #000!important;
+}

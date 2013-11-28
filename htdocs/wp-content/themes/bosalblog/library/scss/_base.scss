@@ -16,7 +16,7 @@ GENERAL STYLES
 *********************/
 
 body {
-	font-family: $serif;
+	font-family: @font-custom;
 	font-size: 100%;
 	line-height: 1.5;
 	color: #565656;
@@ -152,8 +152,12 @@ HEADER STYLES
 
 .header {}
 
-	#logo {}
-
+	#logo {
+            
+        }
+#inner-header{
+    
+}
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -241,7 +245,9 @@ and more scalable.
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-
+#container{
+    
+}
 #content {
 	margin-top: 2.2em;
 }

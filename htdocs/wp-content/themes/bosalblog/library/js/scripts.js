@@ -29,6 +29,9 @@ if (!window.getComputedStyle) {
 
 // as the page loads, call these scripts
 jQuery(document).ready(function($) {
+    
+//------ INIT RESPONSIVE SLIDES
+        $(".rslides").responsiveSlides();
 
 	/*
 	Responsive jQuery is a tricky thing.
